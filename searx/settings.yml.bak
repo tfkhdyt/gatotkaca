@@ -2,14 +2,14 @@ general:
   # Debug mode, only for development
   debug: false
   # displayed name
-  instance_name: "GatotKaca"
+  instance_name: "SearXNG"
   # For example: https://example.com/privacy
   privacypolicy_url: false
   # use true to use your own donation page written in searx/info/en/donate.md
   # use false to disable the donation link
-  donation_url: https://linku.to/tfkhdyt/linku-support
+  donation_url: https://docs.searxng.org/donate.html
   # mailto:contact@example.com
-  contact_url: https://linku.to/tfkhdyt
+  contact_url: false
   # record stats
   enable_metrics: true
 
@@ -22,16 +22,16 @@ brand:
 
 search:
   # Filter results. 0: None, 1: Moderate, 2: Strict
-  safe_search: 1
+  safe_search: 0
   # Existing autocomplete backends: "dbpedia", "duckduckgo", "google",
   # "seznam", "startpage", "swisscows", "qwant", "wikipedia" - leave blank to turn it off
   # by default.
-  autocomplete: "google"
+  autocomplete: ""
   # minimun characters to type before autocompleter starts
   autocomplete_min: 4
   # Default search language - leave blank to detect from browser information or
   # use codes from 'languages.py'
-  default_lang: "all"
+  default_lang: ""
   # Available languages
   # languages:
   #   - all
@@ -55,21 +55,20 @@ server:
   # instance's enviroment (make buildenv)
   port: 8888
   bind_address: "127.0.0.1"
-  # base_url: http://localhost:8080/  # Possible values: false or "https://example.org/location".
   base_url: false  # Possible values: false or "https://example.org/location".
-  limiter: true  # rate limit the number of request on the instance, block some bots
+  limiter: false  # rate limit the number of request on the instance, block some bots
 
   # If your instance owns a /etc/searxng/settings.yml file, then set the following
   # values there.
 
-  secret_key: "8faabe85b562024d1bbf4d0fa639c9d7982974734e5bd4d85eacd432914f32d1"  # change this!
+  secret_key: "ultrasecretkey"  # change this!
   # Proxying image results through searx
-  image_proxy: true
+  image_proxy: false
   # 1.0 and 1.1 are supported
   http_protocol_version: "1.0"
   # POST queries are more secure as they don't show up in history but may cause
   # problems when using Firefox containers
-  method: "GET"
+  method: "POST"
   default_http_headers:
     X-Content-Type-Options: nosniff
     X-XSS-Protection: 1; mode=block
@@ -89,16 +88,16 @@ ui:
   templates_path: ""
   # query_in_title: When true, the result page's titles contains the query
   # it decreases the privacy, since the browser can records the page titles.
-  query_in_title: true
+  query_in_title: false
   # infinite_scroll: When true, automatically loads the next page when scrolling to bottom of the current page.
-  infinite_scroll: true
+  infinite_scroll: false
   # ui theme
   default_theme: simple
   # center the results ?
   center_alignment: false
   # Default interface locale - leave blank to detect from browser information or
   # use codes from the 'locales' config section
-  default_locale: "id"
+  default_locale: ""
   # Open result links in a new tab by default
   # results_on_new_tab: false
   theme_args:
@@ -328,7 +327,7 @@ engines:
   - name: bing
     engine: bing
     shortcut: bi
-    disabled: false
+    disabled: true
 
   - name: bing images
     engine: bing_images
@@ -1175,7 +1174,7 @@ engines:
     engine: qwant
     shortcut: qw
     categories: [general, web]
-    disabled: true
+    disabled: false
     additional_tests:
       rosebud: *test_rosebud
 
@@ -1183,21 +1182,21 @@ engines:
     engine: qwant
     shortcut: qwn
     categories: news
-    disabled: true
+    disabled: false
     network: qwant
 
   - name: qwant images
     engine: qwant
     shortcut: qwi
     categories: [images, web]
-    disabled: true
+    disabled: false
     network: qwant
 
   - name: qwant videos
     engine: qwant
     shortcut: qwv
     categories: [videos, web]
-    disabled: true
+    disabled: false
     network: qwant
 
   # - name: library
@@ -1418,7 +1417,7 @@ engines:
   - name: yahoo
     engine: yahoo
     shortcut: yh
-    disabled: false
+    disabled: true
 
   - name: yahoo news
     engine: yahoo_news
