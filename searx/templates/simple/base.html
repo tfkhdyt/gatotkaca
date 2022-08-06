@@ -2,14 +2,27 @@
 <html class="no-js theme-{{ preferences.get_value('simple_style') or 'auto' }} center-aligment-{{ preferences.get_value('center_alignment') and 'yes' or 'no' }}" lang="{{ locale_rfc5646 }}" {% if rtl %} dir="rtl"{% endif %}>
 <head>
   <meta charset="UTF-8" />
-  <meta name="description" content="SearXNG — a privacy-respecting, hackable metasearch engine">
-  <meta name="keywords" content="SearXNG, search, search engine, metasearch, meta search">
+  <!-- META DATA -->
+  <meta name='description' content='Metasearch engine "Karya Anak Bangsa" yang menghargai privasi penggunanya. Fork dari SearXNG' />
+  <meta name="keywords" content="SearXNG, search, search engine, metasearch, meta search, gatotkaca, kominfo, menkominfo, blokirkominfo, tfkhdyt">
+  <meta name='twitter:card' content='summary' />
+  <meta name='twitter:description' content='Metasearch engine "Karya Anak Bangsa" yang menghargai privasi penggunanya. Fork dari SearXNG' />
+  <meta name='twitter:image' content="{{ url_for('static', filename='img/thumbnail.png') }}" />
+  <meta name='twitter:title' content="GatotKaca" />
+  <meta property='og:description' content='Metasearch engine "Karya Anak Bangsa" yang menghargai privasi penggunanya. Fork dari SearXNG' />
+  <meta property='og:image' content="{{ url_for('static', filename='img/thumbnail.png') }}" />
+  <meta property='og:title' content="GatotKaca" />
+  <meta property='og:type' content='website' />
+  <meta property='og:url' content='https://gatotkaca.tfkhdyt.my.id' />
+  <link rel='image_src' href="{{ url_for('static', filename='img/thumbnail.png') }}" />
+
   <meta name="generator" content="searxng/{{ searx_version }}">
   <meta name="referrer" content="no-referrer">
   <meta name="robots" content="noarchive">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="HandheldFriendly" content="True">
   <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <!-- -------------------------------------------- -->
   <title>{% block title %}{% endblock %}{{ instance_name }}</title>
   {% block meta %}{% endblock %}
   {% if rtl %}
