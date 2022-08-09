@@ -925,7 +925,7 @@ msgstr "Tanpilkan halaman depan"
 #: searx/templates/simple/search.html:9
 #: searx/templates/simple/simple_search.html:5
 msgid "Search for..."
-msgstr "Cari..."
+msgstr "Saatnya menggatot..."
 
 #: searx/templates/simple/search.html:10
 #: searx/templates/simple/simple_search.html:6
