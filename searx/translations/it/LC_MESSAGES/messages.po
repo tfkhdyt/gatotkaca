@@ -14,12 +14,13 @@
 # Random_R, 2018-2020
 # carlonigiulio <giuliocarloni20@gmail.com>, 2022.
 # Markus Heiser <markus.heiser@darmarit.de>, 2022.
+# Content Card <weblate-bubu1@gabg.email>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: searx\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-07-23 14:08+0000\n"
-"PO-Revision-Date: 2022-07-29 07:17+0000\n"
+"PO-Revision-Date: 2022-08-22 12:54+0000\n"
 "Last-Translator: Markus Heiser <markus.heiser@darmarit.de>\n"
 "Language-Team: Italian <https://weblate.bubu1.eu/projects/searxng/searxng/it/"
 ">\n"
@@ -89,7 +90,7 @@ msgstr "mappe"
 #. CATEGORY_NAMES['ONIONS']
 #: searx/searxng.msg
 msgid "onions"
-msgstr "onions"
+msgstr "onion"
 
 #. CATEGORY_NAMES['SCIENCE']
 #: searx/searxng.msg
@@ -287,10 +288,13 @@ msgid ""
 "The image is too simple to find matches. TinEye requires a basic level of"
 " visual detail to successfully identify matches."
 msgstr ""
+"L'immagine è troppo semplice per trovare corrispondenze. TinEye richiede un "
+"maggiore livello di dettagli visivi per identificare corrispondenze con "
+"successo."
 
 #: searx/engines/tineye.py:52
 msgid "The image could not be downloaded."
-msgstr ""
+msgstr "L'immagine non può essere scaricata."
 
 #: searx/plugins/hash_plugin.py:24
 msgid "Converts strings to different hash digests."
@@ -356,12 +360,17 @@ msgid ""
 "This plugin checks if the address of the request is a TOR exit node, and "
 "informs the user if it is, like check.torproject.org but from searxng."
 msgstr ""
+"Questo plugin controlla se l'indirizzo della richiesta è un nodo di uscita "
+"di TOR e informa l'utente se lo è. Simile a check.torproject.org ma fornito "
+"da searxng."
 
 #: searx/plugins/tor_check.py:62
 msgid ""
 "The TOR exit node list (https://check.torproject.org/exit-addresses) is "
 "unreachable."
 msgstr ""
+"La lista dei nodi d'uscita TOR non è raggiungibile (https://check.torproject."
+"org/exit-addresses)."
 
 #: searx/plugins/tor_check.py:78
 msgid "You are using TOR. Your IP address seems to be: {ip_address}."
@@ -369,7 +378,7 @@ msgstr "Stai usando TOR. Il tuo indirizzo IP risulta essere : {ip_address}."
 
 #: searx/plugins/tor_check.py:84
 msgid "You are not using TOR. Your IP address seems to be: {ip_address}."
-msgstr ""
+msgstr "Non stai usando TOR. Il tuo indirizzo IP sembra essere: {ip_address}."
 
 #: searx/plugins/tracker_url_remover.py:29
 msgid "Tracker URL remover"
